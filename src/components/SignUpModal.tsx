@@ -88,6 +88,7 @@ const SignUpModal = ({ isOpen, onClose }: SignUpModalProps) => {
             <form onSubmit={handleSubmit(onSubmit)}>
               <Input
                 label="Name"
+                name="name"
                 type="text"
                 register={register}
                 error={{ message: errors.name?.message as string }}
@@ -95,6 +96,7 @@ const SignUpModal = ({ isOpen, onClose }: SignUpModalProps) => {
               />
               <Input
                 label="Email"
+                name="email"
                 type="email"
                 register={register}
                 error={{ message: errors.email?.message as string }}
@@ -102,6 +104,7 @@ const SignUpModal = ({ isOpen, onClose }: SignUpModalProps) => {
               />
               <Input
                 label="Password"
+                name="password"
                 type="password"
                 register={register}
                 error={{ message: errors.password?.message as string }}

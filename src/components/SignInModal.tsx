@@ -86,6 +86,7 @@ const SignInModal = ({ isOpen, onClose }: SignInModalProps) => {
                 register={register}
                 error={{ message: errors.email?.message as string }}
                 placeholder="Enter your email"
+                name="email"
               />
               <Input
                 label="Password"
@@ -93,6 +94,7 @@ const SignInModal = ({ isOpen, onClose }: SignInModalProps) => {
                 register={register}
                 error={{ message: errors.password?.message as string }}
                 placeholder="Enter your password"
+                name="password"
               />
               <button
                 type="submit"
