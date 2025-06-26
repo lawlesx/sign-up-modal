@@ -7,6 +7,7 @@ interface InputProps<T extends FieldValues> {
   name: Path<T>;
   error?: { message: string };
   placeholder?: string;
+  autoFocus?: boolean;
 }
 
 const Input = <T extends FieldValues>({
@@ -16,6 +17,7 @@ const Input = <T extends FieldValues>({
   name,
   error,
   placeholder,
+  autoFocus = false,
 }: InputProps<T>) => {
   return (
     <div className="mb-4">
@@ -25,6 +27,7 @@ const Input = <T extends FieldValues>({
         className="w-full px-3 py-2 border border-gray-300 rounded"
         placeholder={placeholder}
         {...register(name)}
+        autoFocus={autoFocus}
       />
       {error && <p className="text-red-500 text-sm mt-1">{error.message}</p>}
     </div>

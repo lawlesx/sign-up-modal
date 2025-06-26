@@ -87,6 +87,7 @@ const SignInModal = ({ isOpen, onClose }: SignInModalProps) => {
                 error={{ message: errors.email?.message as string }}
                 placeholder="Enter your email"
                 name="email"
+                autoFocus
               />
               <Input
                 label="Password"

@@ -93,6 +93,7 @@ const SignUpModal = ({ isOpen, onClose }: SignUpModalProps) => {
                 register={register}
                 error={{ message: errors.name?.message as string }}
                 placeholder="Enter your name"
+                autoFocus
               />
               <Input
                 label="Email"
