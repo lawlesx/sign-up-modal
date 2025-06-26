@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+# 🛠️ Auth Modals – Sign Up & Sign In
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern authentication UI built using **React (Vite)**, **Tailwind CSS**, **Framer Motion**, **TypeScript**, **React Hook Form**, and **Zod**.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 Modal-based **Sign Up** and **Sign In** forms
+- 🎯 Schema validation with Zod
+- 💅 Responsive and clean UI via Tailwind
+- 🎬 Animations with Framer Motion
+- 🍞 Toasts for success feedback
+- ♿ Fully accessible with focus trapping
+- ⚡ Fast dev environment using Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+To run this project locally, follow these steps:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/lawlesx/sign-up-modal.git
+cd sign-up-modal
+yarn
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧪 Tech Stack
+
+| Tool            | Purpose               |
+| --------------- | --------------------- |
+| React + Vite    | Frontend Framework    |
+| Tailwind CSS    | Utility-first styling |
+| TypeScript      | Type safety           |
+| Framer Motion   | UI animations         |
+| React Hook Form | Form state handling   |
+| Zod             | Schema validation     |
+| React Toastify  | Toast notifications   |
+
+---
+
+## 🔓 Sign Up Modal
+
+**Fields:**
+
+- Name
+- Email
+- Password
+- Accept Terms & Conditions ✅
+
+**Validations:**
+
+- Required fields
+- Email format check
+- Password strength (optional)
+- Terms checkbox must be checked
+
+---
+
+## 🔑 Sign In Modal
+
+**Fields:**
+
+- Email
+- Password
+
+**Validations:**
+
+- Required fields
+- Valid email format
+
+---
+
+## ✅ User Flow
+
+- Clicking **Sign Up** or **Sign In** opens modal
+- Modal can be closed by:
+  - Clicking outside
+  - Using the close button
+- On successful submission:
+  - Show success toast
+
+---
+
+## ♿ Accessibility
+
+- Focus is trapped within modal
+- Full keyboard navigation
+
+---
